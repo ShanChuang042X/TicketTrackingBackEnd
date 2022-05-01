@@ -18,8 +18,7 @@ namespace TicketTrackingAP.Controllers
         {
             return Ok(7777);
         }
-        [HttpPost("")]
-        [Route("Add")]
+        [HttpPost("Add")]
         [Produces("application/json", Type = typeof(int))]
         public async Task<IActionResult> Add(Model.Ticket ticket)
         {
@@ -37,8 +36,7 @@ namespace TicketTrackingAP.Controllers
             
         }
 
-        [HttpPost("")]
-        [Route("Update")]
+        [HttpPost("Update")]
         [Produces("application/json", Type = typeof(int))]
         public async Task<IActionResult> Update(Model.Ticket ticket)
         {
@@ -56,8 +54,7 @@ namespace TicketTrackingAP.Controllers
 
         }
 
-        [HttpPost("")]
-        [Route("Delete")]
+        [HttpPost("Delete")]
         [Produces("application/json", Type = typeof(int))]
         public async Task<IActionResult> Delete(Model.Ticket ticket)
         {
@@ -75,8 +72,7 @@ namespace TicketTrackingAP.Controllers
 
         }
 
-        [HttpGet]
-        [Route("GetAll")]
+        [HttpGet("GetAll")]
         [Produces("application/json", Type = typeof(List<Model.Ticket>))]
         public async Task<IActionResult> GetAll()
         {
@@ -87,8 +83,7 @@ namespace TicketTrackingAP.Controllers
 
 
 
-        [HttpGet]
-        [Route("{ticketID}/Get")]
+        [HttpGet("{ticketID}/Get")]
         [Produces("application/json", Type = typeof(Model.Ticket))]
         public async Task<IActionResult> Get(string ticketID)
         {

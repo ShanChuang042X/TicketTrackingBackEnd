@@ -1,0 +1,340 @@
+{
+  "x-generator": "NSwag v13.15.10.0 (NJsonSchema v10.6.10.0 (Newtonsoft.Json v11.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "host": "localhost:44327",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/Ticket/Test": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_Test",
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/Add": {
+      "post": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_Add",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/Update": {
+      "post": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_Update",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/Delete": {
+      "post": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_Delete",
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/GetAll": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_GetAll",
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Ticket"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Ticket/{ticketID}/Get": {
+      "get": {
+        "tags": [
+          "Ticket"
+        ],
+        "operationId": "Ticket_Get",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "ticketID",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Ticket"
+            }
+          }
+        }
+      }
+    },
+    "/api/Values": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "operationId": "Values_GetAll",
+        "produces": [
+          "text/plain"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Values"
+        ],
+        "operationId": "Values_Post",
+        "parameters": [
+          {
+            "name": "value",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api/Values/{id}": {
+      "get": {
+        "tags": [
+          "Values"
+        ],
+        "operationId": "Values_Get",
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Values"
+        ],
+        "operationId": "Values_Put",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "name": "value",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Values"
+        ],
+        "operationId": "Values_Delete",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Ticket": {
+      "type": "object",
+      "required": [
+        "createTime",
+        "updateTime"
+      ],
+      "properties": {
+        "ticketId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "ticketType": {
+          "type": "string"
+        },
+        "applicant": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "solver": {
+          "type": "string"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "severity": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "string"
+        },
+        "rdRemark": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
