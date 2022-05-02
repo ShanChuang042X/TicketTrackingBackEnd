@@ -72,7 +72,8 @@ namespace TicketTrackingAP.Controllers
 
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
+        [Route("GetAll")]
         [Produces("application/json", Type = typeof(List<Model.Ticket>))]
         public async Task<IActionResult> GetAll()
         {
